@@ -29,8 +29,3 @@ y_pred = model.predict(X_test)
 mse = mean_squared_error(Y_test, y_pred)
 print('Mean Squared Error',mse)
 
-plt.scatter(Y_test, Y_test - y_pred)
-plt.plot(X, model.predict(X), color='red', linewidth=2)
-plt.xlabel('Independant Variables')
-plt.ylabel('financial literacy')
-plt.show()
