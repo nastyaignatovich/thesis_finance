@@ -1,18 +1,13 @@
 import pandas as pd
+import pickle
 import statsmodels.api as sm
 from scipy.stats import pearsonr, spearmanr
 
 # Load your dataset
-data = pd.read_excel('survey_answers.xlsx')
+with open("data.pkl", 'rb') as f:
+    data = pickle.load(f)
 
-# Rename columns for clarity (if needed)
-data = data.rename(columns={
-    '10. How would you rate your financial literacy?': 'Financial Literacy',
-    '18. What percentage of your financial portfolio (stocks, bonds, ETFs, investment funds) is invested in assets outside your home country?': 'Percentage of Foreign Assets'
-})
-
-# Drop rows with missing data in the relevant columns
-data = data.dropna(subset=['Financial Literacy', 'Percentage of Foreign Assets'])
+print(data.columns)
 
 # Correlation Analysis
 # Pearson Correlation
