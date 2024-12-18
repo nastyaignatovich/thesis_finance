@@ -1,0 +1,37 @@
+Dependent Variable: foreign_portfolio_pct
+
+Included Variables:
+Regular variables: ['age', 'gender', 'education_high', 'income_medium', 'income_high', 'fin_literacy', 'invest_confidence', 'long_outlook_diff']
+Factor variables: []
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     foreign_portfolio_pct   R-squared:                       0.280
+Model:                               OLS   Adj. R-squared:                  0.206
+Method:                    Least Squares   F-statistic:                     3.787
+Date:                   Mon, 16 Dec 2024   Prob (F-statistic):           0.000848
+Time:                           06:50:57   Log-Likelihood:                -401.44
+No. Observations:                     87   AIC:                             820.9
+Df Residuals:                         78   BIC:                             843.1
+Df Model:                              8                                         
+Covariance Type:               nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                51.4629     20.383      2.525      0.014      10.883      92.043
+age                  -0.9138      0.438     -2.086      0.040      -1.786      -0.042
+gender              -13.0236      5.765     -2.259      0.027     -24.501      -1.547
+education_high      -16.4346     12.306     -1.336      0.186     -40.933       8.064
+income_medium        20.3875      6.993      2.915      0.005       6.465      34.310
+income_high          37.8461      9.934      3.810      0.000      18.069      57.623
+fin_literacy         -0.7179      2.517     -0.285      0.776      -5.729       4.293
+invest_confidence     2.5987      1.963      1.324      0.189      -1.309       6.506
+long_outlook_diff    -2.9052      1.496     -1.942      0.056      -5.884       0.073
+==============================================================================
+Omnibus:                       15.739   Durbin-Watson:                   2.035
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               18.479
+Skew:                           0.935   Prob(JB):                     9.71e-05
+Kurtosis:                       4.266   Cond. No.                         256.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
